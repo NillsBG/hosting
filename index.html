@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Compra de Medicamento</h2>
+        <img src="Multimedia/farmacia_logo.png" alt="Logo de Farmacia" class="logo">
+
+        <form id="formCompra">
+            <label for="nombreCliente">Nombre del Cliente:</label>
+            <input type="text" id="nombreCliente" name="nombreCliente" placeholder="Ingresa tu nombre" required>
+
+            
+
+            <label for="numeroCliente">Numero de Telefono:</label>
+            <input type="text" id="numeroCliente" name="numeroCliente" placeholder="Ingresa tu numero" required>
+
+            <label for="medicamento">Medicamento:</label>
+            <select id="medicamento" name="medicamento">
+                <option value="paracetamol">Paracetamol - Q5</option>
+                <option value="ibuprofeno">Ibuprofeno - Q8</option>
+                <option value="amoxicilina">Amoxicilina - Q12</option>
+            </select>
+
+            <label>Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" placeholder="1" required>
+
+            <div class="opciones">
+                <label>Método de Pago:</label>
+                <label><input type="radio" name="metodoPago" value="tarjeta" required> Tarjeta</label>
+                <label><input type="radio" name="metodoPago" value="efectivo" required> Efectivo</label>
+            </div>
+
+            <div class="checkbox">
+                <label><input type="checkbox" id="entregaDomicilio" name="entregaDomicilio"> Entrega a Domicilio</label>
+            </div>
+
+            <button type="button" onclick="calcularTotal()">Calcular Total</button>
+
+            <p id="totalCompra">Total: Q0</p>
+        </form>
+    </div>
+
+    <script src="precio.js"></script>
+    <script src="Total.js"></script>
+</body>
+</html>
